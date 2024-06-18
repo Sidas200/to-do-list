@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>TO-DO-LIST</title>
+        <link rel="stylesheet" href="styles/main.css">
+    </head>
+</html>
+    <body>
+        <div id="div" class="header">
+            <h2>Mi lista de tareas</h2>
+            <input type="text" id="entrada" placeholder="Tarea...">
+            <span onclick="newElement()" class="añadirboton">Añadir</span>
+        </div>
+        <ul id="lista" class="list">
+            <li>Ir al super</li>
+            <li class="hecho">Pagar el banco</li>
+        </ul>
+        <script>
+            var milista = document.getElementsByTagName("LI");
+            var i;
+            for(i=0; i<milista.length;i++){
+                var span = document.createElement("SPAN");
+                var txt = document.createTextNode("\u00D7");
+                span.className= "cerrar";
+                span.appendChild(txt);
+                milista[i].appendChild(span);
+            }
+
+            var close = document.getElementsByClassName("cerrar");
+            var i;
+            for (i=0;i<close.length;i++){
+                close[i].onclick=function(){
+                    var div = this.parentElement;
+                    div.style.display="none";
+                }
+            }
+
+            var mark = document.querySelector('ul');
+            mark.addEventListener('Click', function(ev){
+                if(ev.target.tagname == 'LI'){
+                    ev.target.classList.toggle('hecho');
+                }
+            }, false);
+
+            function newElement(){
+                var li = document.createElement("li");
+                var valorentrada = document.getElementById("entrada").value;
+                var t = document.createTextNode(valorentrada);
+                li.appendChild(t);
+                if(valorentrada=== ""){
+                    alert("Debes escribir alguna tarea pendiente");
+
+                }else{
+                    document.getElementById("lista").appendChild(li);
+                    
+                }
+                document.getElementById("entrada").value="";
+
+                var span = document.createElement("SPAN");
+                var txt = document.createTextNode("\u00D7");
+                span.className = "cerrar";
+                span.appendChild(txt);
+                li.appendChild(span);
+
+                for(i=0; i<close.length;i++){
+                    close[i].onclick = function(){
+                        var div = this.parentElement;
+                        div.style.display="none";
+                    }
+                }
+
+
+            }
+        </script>
+    </body>
