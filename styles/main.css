@@ -10,7 +10,7 @@ ul li{
     cursor: pointer;
     position: relative;
     padding: 12px 8px 12px 40px;
-    background-color: #eee;
+    background-color: #fff3db;
     font-size: 18px;
     transition: 0.2s;
 
@@ -21,15 +21,15 @@ ul li{
 }
 
 ul li:nth-child(odd){
-    background: #f9f9f9;
+    background: #e7e4d5;
 }
 
 ul li:hover{
-    background: #ddd;
+    background: #d3c8b4;
 }
 
 ul li.hecho{
-    background: #888;
+    background: #c84648;
     color: #fff;
     text-decoration: line-through;
 }
@@ -54,12 +54,12 @@ ul li.hecho::before{
 }
 
 .cerrar:hover{
-    background-color: #f44336;
+    background-color: #703e3b;
     color: white;
 }
 
 .header{
-    background-color: #f44336;
+    background-color: #703e3b;
     padding: 30px 40px;
     color: white;
     text-align: center;
@@ -84,8 +84,8 @@ input{
 .añadirboton{
     padding: 10px;
     width: 25%;
-    background: #d9d9d9;
-    color: #555;
+    background: #e7e4d5;
+    color: black;
     float: left;
     text-align: center;
     font-size: 16px;
@@ -95,5 +95,5 @@ input{
 }
 
 .añadirboton:hover{
-    background-color: #bbb;
+    background-color: #fff3db;
 }
