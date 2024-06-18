@@ -34,7 +34,7 @@ ul li.hecho{
     text-decoration: line-through;
 }
 
-ul li.checked::before{
+ul li.hecho::before{
     content:'';
     position: absolute;
     border-color: #fff;

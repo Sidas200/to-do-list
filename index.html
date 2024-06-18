@@ -35,10 +35,10 @@
                 }
             }
 
-            var mark = document.querySelector('ul');
-            mark.addEventListener('Click', function(ev){
-                if(ev.target.tagname == 'LI'){
-                    ev.target.classList.toggle('hecho');
+            var lista = document.querySelector('ul');
+            lista.addEventListener('click',function(ev){
+                if(ev.target.tagName === 'LI'){
+                    ev.target.ClassList.toggle('hecho');
                 }
             }, false);
 
