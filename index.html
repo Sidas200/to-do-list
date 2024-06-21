@@ -4,7 +4,6 @@
         <title>TO-DO-LIST</title>
         <link rel="stylesheet" href="styles/main.css">
     </head>
-</html>
     <body>
         <div id="div" class="header">
             <h2>Mi lista de tareas</h2>
@@ -38,7 +37,7 @@
             var lista = document.querySelector('ul');
             lista.addEventListener('click',function(ev){
                 if(ev.target.tagName === 'LI'){
-                    ev.target.ClassList.toggle('hecho');
+                    ev.target.classList.toggle('hecho');
                 }
             }, false);
 
@@ -68,8 +67,7 @@
                         div.style.display="none";
                     }
                 }
-
-
             }
         </script>
     </body>
+ </html>
