@@ -2,13 +2,13 @@
 <html>
     <head>
         <title>TO-DO-LIST</title>
-        <link rel="stylesheet" href="styles/main.css">
+        <link rel="stylesheet" href="bulma/css/bulma.css">
     </head>
     <body>
-        <div id="div" class="header">
-            <h2>Mi lista de tareas</h2>
-            <input type="text" id="entrada" placeholder="Tarea...">
-            <span onclick="newElement()" class="añadirboton">Añadir</span>
+        <div id="div" class="block">
+            <h2 class="title is-1">Mi lista de tareas</h2>
+            <input class="input is-primary" type="text" id="entrada" placeholder="Tarea...">
+            <span onclick="newElement()" class="button is-primary">Añadir</span>
         </div>
         <ul id="lista" class="list">
             <li>Ir al super</li>
@@ -20,12 +20,12 @@
             for(i=0; i<milista.length;i++){
                 var span = document.createElement("SPAN");
                 var txt = document.createTextNode("\u00D7");
-                span.className= "cerrar";
+                span.className= "delete";
                 span.appendChild(txt);
                 milista[i].appendChild(span);
             }
 
-            var close = document.getElementsByClassName("cerrar");
+            var close = document.getElementsByClassName("delete");
             var i;
             for (i=0;i<close.length;i++){
                 close[i].onclick=function(){
